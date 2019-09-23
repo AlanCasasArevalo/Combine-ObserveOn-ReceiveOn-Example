@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewController" customModule="Combine_ObserveOn_ReceiveOn_Example" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="aP4-qb-YGs" id="ikr-E0-yfs"/>
+                <outlet property="timeLabel" destination="RgX-1m-Vi6" id="iml-tu-dhE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aP4-qb-YGs">
+                    <rect key="frame" x="30" y="50" width="354" height="354"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aP4-qb-YGs" secondAttribute="height" multiplier="1:1" id="OLI-Dj-9hh"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yl-8v-Cbk">
+                    <rect key="frame" x="30" y="424" width="354" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ncK-eR-ViU"/>
+                    </constraints>
+                    <state key="normal" title="Descargar imagen"/>
+                    <connections>
+                        <action selector="downloadButton:" destination="-1" eventType="touchUpInside" id="VWj-yZ-ZvU"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgX-1m-Vi6">
+                    <rect key="frame" x="30" y="504" width="354" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="tzx-Jh-YAu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aP4-qb-YGs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="6DN-8B-M1f"/>
+                <constraint firstItem="9Yl-8v-Cbk" firstAttribute="top" secondItem="aP4-qb-YGs" secondAttribute="bottom" constant="20" id="9jx-63-Jl2"/>
+                <constraint firstItem="RgX-1m-Vi6" firstAttribute="leading" secondItem="9Yl-8v-Cbk" secondAttribute="leading" id="BUG-AS-2kc"/>
+                <constraint firstItem="RgX-1m-Vi6" firstAttribute="top" secondItem="9Yl-8v-Cbk" secondAttribute="bottom" constant="30" id="MeS-f7-hzO"/>
+                <constraint firstItem="aP4-qb-YGs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Teb-DB-5ad"/>
+                <constraint firstItem="9Yl-8v-Cbk" firstAttribute="leading" secondItem="aP4-qb-YGs" secondAttribute="leading" id="WCC-fn-lx7"/>
+                <constraint firstItem="9Yl-8v-Cbk" firstAttribute="width" secondItem="aP4-qb-YGs" secondAttribute="width" id="bBv-kv-cRE"/>
+                <constraint firstItem="RgX-1m-Vi6" firstAttribute="width" secondItem="9Yl-8v-Cbk" secondAttribute="width" id="xwP-oB-AYS"/>
+                <constraint firstItem="aP4-qb-YGs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y5d-r3-3hl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
